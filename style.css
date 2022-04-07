@@ -34,5 +34,10 @@ body {
 #grid {
     height: 500px;
     width: 500px;
+    display: grid;
+    border: 1px solid black;
+}
+
+.grid-item {
     border: 1px solid black;
 }

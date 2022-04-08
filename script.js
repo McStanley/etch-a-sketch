@@ -11,6 +11,21 @@ function createGrid(gridSize) {
         grid.appendChild(gridItem);
         gridSquares--;
     }
+    activateGrid();
+}
+
+function activateGrid() {
+    const gridItems = document.querySelectorAll('.grid-item');
+    gridItems.forEach(gridItem => {
+        gridItem.addEventListener('mousedown', fillSquare);
+        gridItem.addEventListener('mouseenter', fillSquare);
+    });
+}
+
+function fillSquare(event) {
+    if (event.buttons != 1) return;
+
+    event.target.style.backgroundColor = 'steelblue';
 }
 
 let gridSize = 16;

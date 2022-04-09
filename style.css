@@ -1,20 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Bungee', cursive;
 }
 
 body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #e7ca48;
 }
 
 .header {
-    height: 50px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.header-text {
+    font-size: 48px;
 }
 
 .main {
@@ -31,10 +39,15 @@ body {
     align-items: center;
 }
 
+.footer-text {
+    font-size: 18px;
+}
+
 #grid {
     height: 500px;
     width: 500px;
     display: grid;
+    background-color: papayawhip;
     border: 1px solid black;
 }
 

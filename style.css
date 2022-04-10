@@ -29,7 +29,7 @@ button {
 }
 
 .header-text {
-    font-size: 48px;
+    font-size: 58px;
 }
 
 .main {
@@ -68,11 +68,11 @@ button {
 }
 
 .footer-text {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .controls {
-    height: 500px;
+    height: 400px;
     width: 300px;
     padding: 15px;
     display: flex;
@@ -94,8 +94,8 @@ button {
 }
 
 #grid {
-    height: 500px;
-    width: 500px;
+    height: 600px;
+    width: 600px;
     display: grid;
     background-color: papayawhip;
     border: 1px solid black;

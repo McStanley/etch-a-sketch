@@ -14,6 +14,10 @@ body {
     background-color: #e7ca48;
 }
 
+button {
+    padding: 5px;
+}
+
 .header {
     height: 100px;
     display: flex;

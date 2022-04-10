@@ -1,4 +1,7 @@
+const DEFAULT_SIZE = 16;
+
 const grid = document.querySelector('#grid');
+const btnClear = document.querySelector('#btn-clear');
 
 function createGrid(gridSize) {
     grid.replaceChildren();
@@ -28,6 +31,14 @@ function fillSquare(event) {
     event.target.style.backgroundColor = 'steelblue';
 }
 
-let gridSize = 16;
+function clearGrid() {
+    const gridItems = document.querySelectorAll('.grid-item');
+    gridItems.forEach(gridItem => {
+        gridItem.style.backgroundColor = '';
+    });
+}
 
+btnClear.addEventListener('click', clearGrid);
+
+let gridSize = DEFAULT_SIZE;
 createGrid(gridSize);

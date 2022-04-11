@@ -1,10 +1,16 @@
 const DEFAULT_SIZE = 16;
-const DEFAULT_COLOR = 'steelblue';
+const DEFAULT_COLOR = '#4682b4';
 
 const grid = document.querySelector('#grid');
+const colorPicker = document.querySelector('#color-picker');
 const btnDraw = document.querySelector('#btn-draw');
 const btnErase = document.querySelector('#btn-erase');
 const btnClear = document.querySelector('#btn-clear');
+
+function updateColor() {
+    currentColor = colorPicker.value;
+    activateDraw();
+}
 
 function activateDraw() {
     btnErase.classList.remove('btn-active');
@@ -49,10 +55,13 @@ function fillSquare(event) {
     }
 }
 
+colorPicker.addEventListener('input', updateColor);
 btnDraw.addEventListener('click', activateDraw);
 btnErase.addEventListener('click', activateErase);
 btnClear.addEventListener('click', createGrid);
 
-let gridSize = DEFAULT_SIZE;
 let currentColor = DEFAULT_COLOR;
+colorPicker.setAttribute('value', currentColor);
+
+let gridSize = DEFAULT_SIZE;
 createGrid();

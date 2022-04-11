@@ -6,10 +6,19 @@ const colorPicker = document.querySelector('#color-picker');
 const btnDraw = document.querySelector('#btn-draw');
 const btnErase = document.querySelector('#btn-erase');
 const btnClear = document.querySelector('#btn-clear');
+const sizeSlider = document.querySelector('#size-slider');
+const sizeSliderOutput = document.querySelector('#size-slider-output');
 
 function updateColor() {
     currentColor = colorPicker.value;
     activateDraw();
+}
+
+function updateSize() {
+    sizeSliderOutput.textContent = sizeSlider.value;
+
+    gridSize = sizeSlider.value;
+    createGrid();
 }
 
 function activateDraw() {
@@ -59,9 +68,12 @@ colorPicker.addEventListener('input', updateColor);
 btnDraw.addEventListener('click', activateDraw);
 btnErase.addEventListener('click', activateErase);
 btnClear.addEventListener('click', createGrid);
+sizeSlider.addEventListener('input', updateSize);
 
 let currentColor = DEFAULT_COLOR;
 colorPicker.setAttribute('value', currentColor);
 
 let gridSize = DEFAULT_SIZE;
+sizeSlider.setAttribute('value', gridSize);
+sizeSliderOutput.textContent = gridSize;
 createGrid();

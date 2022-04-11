@@ -14,8 +14,8 @@
         </header>
         <main class="main">
             <div class="main-left">
-                <div class="controls">
-                    <h2 class="controls-title">Controls</h2>
+                <div class="side-container">
+                    <h2 class="side-header">Controls</h2>
                     <input type="color" id="color-picker">
                     <button id="btn-draw">Draw</button>
                     <button id="btn-erase">Erase</button>
@@ -28,7 +28,14 @@
                 </div>
             </div>
             <div class="main-right">
-                <!-- Put info about Etch A Sketch here! -->
+                <div class="side-container">
+                    <label for="size-slider" class="side-header">Grid Size</label>
+                    <input type="range" min="1" max="50" step="1" id="size-slider">
+                    <output id="size-slider-output"></output>
+                </div>
+                <div class="side-container">
+                    <a href="https://en.wikipedia.org/wiki/Etch_A_Sketch" target="_blank" class="side-header">Wikipedia</a>
+                </div>
             </div>
         </main>
         <footer class="footer">

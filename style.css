@@ -14,6 +14,10 @@ body {
     background-color: #e7ca48;
 }
 
+a {
+    color: #4682b4;
+}
+
 button {
     height: 45px;
     width: 100px;
@@ -22,6 +26,7 @@ button {
     border: 2px outset #767676;
 }
 
+/* Header */
 .header {
     height: 100px;
     display: flex;
@@ -33,6 +38,7 @@ button {
     font-size: 58px;
 }
 
+/* Main */
 .main {
     flex: 1;
     display: flex;
@@ -59,33 +65,43 @@ button {
 .main-right {
     height: 100%;
     flex: 1;
-}
-
-.footer {
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer-text {
-    font-size: 20px;
-}
-
-.controls {
-    height: 400px;
-    width: 300px;
-    padding: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 70px;
+}
+
+/* Grid */
+#grid {
+    height: 600px;
+    width: 600px;
+    display: grid;
+    background-color: papayawhip;
+    border: 2px solid black;
+}
+
+.grid-item {
+    user-select: none;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/* Sides */
+.side-container {
+    height: auto;
+    width: 300px;
+    padding: 50px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
     background-color: papayawhip;
     border: 2px solid black;
     border-radius: 3%;
 }
 
-.controls-title {
+.side-header {
     font-size: 22px;
 }
 
@@ -100,15 +116,18 @@ button {
     border-width: 5px;
 }
 
-#grid {
-    height: 600px;
-    width: 600px;
-    display: grid;
-    background-color: papayawhip;
-    border: 1px solid black;
+#size-slider {
+    width: 80%;
 }
 
-.grid-item {
-    user-select: none;
-    border: 1px solid black;
+/* Footer */
+.footer {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-text {
+    font-size: 20px;
 }

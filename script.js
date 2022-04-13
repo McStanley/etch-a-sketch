@@ -16,15 +16,13 @@ function init() {
     btnDraw.addEventListener('click', activateDraw);
     btnErase.addEventListener('click', activateErase);
     btnClear.addEventListener('click', createGrid);
-    sizeSlider.addEventListener('input', updateSize);
+    sizeSlider.addEventListener('input', updateGrid);
 
     currentColor = DEFAULT_COLOR;
     colorPicker.setAttribute('value', currentColor);
 
-    gridSize = DEFAULT_SIZE;
-    sizeSlider.setAttribute('value', gridSize);
-    sizeSliderOutput.textContent = gridSize;
-    createGrid();
+    sizeSlider.setAttribute('value', DEFAULT_SIZE);
+    updateGrid();
 }
 
 function updateColor() {
@@ -32,11 +30,17 @@ function updateColor() {
     activateDraw();
 }
 
-function updateSize() {
-    sizeSliderOutput.textContent = sizeSlider.value;
+function updateGrid() {
+    updateSlider();
 
     gridSize = sizeSlider.value;
     createGrid();
+}
+
+function updateSlider() {
+    let newFontSize = 20+(sizeSlider.value/3);
+    sizeSliderOutput.style.fontSize = newFontSize + 'px';
+    sizeSliderOutput.textContent = `${sizeSlider.value} ✕ ${sizeSlider.value}`;
 }
 
 function activateDraw() {

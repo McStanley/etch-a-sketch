@@ -9,6 +9,24 @@ const btnClear = document.querySelector('#btn-clear');
 const sizeSlider = document.querySelector('#size-slider');
 const sizeSliderOutput = document.querySelector('#size-slider-output');
 
+let gridSize, currentColor;
+
+function init() {
+    colorPicker.addEventListener('input', updateColor);
+    btnDraw.addEventListener('click', activateDraw);
+    btnErase.addEventListener('click', activateErase);
+    btnClear.addEventListener('click', createGrid);
+    sizeSlider.addEventListener('input', updateSize);
+
+    currentColor = DEFAULT_COLOR;
+    colorPicker.setAttribute('value', currentColor);
+
+    gridSize = DEFAULT_SIZE;
+    sizeSlider.setAttribute('value', gridSize);
+    sizeSliderOutput.textContent = gridSize;
+    createGrid();
+}
+
 function updateColor() {
     currentColor = colorPicker.value;
     activateDraw();
@@ -64,16 +82,4 @@ function fillSquare(event) {
     }
 }
 
-colorPicker.addEventListener('input', updateColor);
-btnDraw.addEventListener('click', activateDraw);
-btnErase.addEventListener('click', activateErase);
-btnClear.addEventListener('click', createGrid);
-sizeSlider.addEventListener('input', updateSize);
-
-let currentColor = DEFAULT_COLOR;
-colorPicker.setAttribute('value', currentColor);
-
-let gridSize = DEFAULT_SIZE;
-sizeSlider.setAttribute('value', gridSize);
-sizeSliderOutput.textContent = gridSize;
-createGrid();
+init();

@@ -12,9 +12,15 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #e7ca48;
+    user-select: none;
 }
 
 a {
+    color: inherit;
+    transition: 0.25s;
+}
+
+a:hover {
     color: #4682b4;
 }
 
@@ -82,7 +88,6 @@ button {
 }
 
 .grid-item {
-    user-select: none;
     border: 1px solid rgba(0, 0, 0, 0.5);
 }
 

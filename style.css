@@ -17,7 +17,7 @@ body {
 
 a {
     color: inherit;
-    transition: 0.25s;
+    transition: color 0.25s;
 }
 
 a:hover {
@@ -106,13 +106,22 @@ button {
     justify-content: center;
     align-items: center;
     gap: 30px;
+    font-size: 24px;
     background-color: papayawhip;
     border: 2px solid black;
     border-radius: 3%;
+    transition: font-size 0.5s;
+}
+
+.side-container:hover {
+    font-size: 26px;
 }
 
 .side-header {
-    font-size: 24px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    font-size: inherit;
 }
 
 #color-picker {

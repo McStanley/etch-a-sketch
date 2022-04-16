@@ -91,6 +91,11 @@ button {
     border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
+.grid-item:hover {
+    background-color: rgba(128, 128, 128, 0.2);
+    border: 2px solid rgba(0, 0, 0, 0.7);
+}
+
 /* Sides */
 .side-container {
     height: auto;

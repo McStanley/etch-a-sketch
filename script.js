@@ -12,6 +12,7 @@ const sizeSliderOutput = document.querySelector('#size-slider-output');
 let gridSize, currentColor;
 
 function init() {
+    grid.addEventListener('contextmenu', event => event.preventDefault());
     colorPicker.addEventListener('input', updateColor);
     btnDraw.addEventListener('click', activateDraw);
     btnErase.addEventListener('click', activateErase);
@@ -77,11 +78,16 @@ function activateGrid() {
 }
 
 function fillSquare(event) {
-    if (event.buttons != 1) return;
-
-    if (btnDraw.classList.contains('btn-active')) {
-        event.target.style.backgroundColor = currentColor;
-    } else {
+    // Primary button
+    if (event.buttons == 1) {
+        if (btnDraw.classList.contains('btn-active')) {
+            event.target.style.backgroundColor = currentColor;
+        } else {
+            event.target.style.backgroundColor = '';
+        }
+    }
+    //Secondary button
+    if (event.buttons == 2) {
         event.target.style.backgroundColor = '';
     }
 }

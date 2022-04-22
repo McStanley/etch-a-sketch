@@ -33,6 +33,7 @@ button {
     padding: 5px;
     font-size: 16px;
     border: 2px outset #767676;
+    transition: all 0.1s;
 }
 
 /* Header */
@@ -134,7 +135,7 @@ button {
 }
 
 .btn-active {
-    font-size: 20px;
+    font-size: 19px;
     border-width: 5px;
 }
 

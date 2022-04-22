@@ -13,7 +13,8 @@ body {
     min-width: min-content;
     display: flex;
     flex-direction: column;
-    background-color: #e7ca48;
+    background-color: #FBAB7E;
+    background-image: linear-gradient(0deg, #FBAB7E 0%, #F7CE68 100%);
     user-select: none;
 }
 
@@ -154,8 +155,9 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(245, 245, 245, 0.5);
 }
 
 .footer-text {
-    font-size: 20px;
+    font-size: 18px;
 }

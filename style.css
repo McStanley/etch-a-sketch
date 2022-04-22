@@ -81,6 +81,13 @@ button {
     display: grid;
     background-color: papayawhip;
     border: 2px solid black;
+    transition: all 0.5s ease 1s;
+}
+
+#grid:hover {
+    height: 650px;
+    width: 650px;
+    transition: all 0.5s ease 0s;
 }
 
 .grid-item {

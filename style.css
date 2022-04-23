@@ -156,8 +156,11 @@ button {
     justify-content: center;
     align-items: center;
     background-color: rgba(245, 245, 245, 0.5);
+    font-size: 16px;
+    transition: all 0.3s;
 }
 
-.footer-text {
+.footer:hover {
+    background-color: rgba(245, 245, 245, 0.7);
     font-size: 18px;
 }

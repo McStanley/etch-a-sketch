@@ -28,8 +28,8 @@ a:hover {
 }
 
 button {
-    height: 45px;
-    width: 100px;
+    height: 50px;
+    width: 150px;
     padding: 5px;
     font-size: 16px;
     border: 2px outset #767676;
@@ -108,7 +108,7 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 25px;
     font-size: 22px;
     background-color: papayawhip;
     border: 2px solid black;
@@ -124,8 +124,8 @@ button {
 }
 
 #color-picker {
-    height: 45px;
-    width: 100px;
+    height: 50px;
+    width: 150px;
     border: 5px double #767676;
 }
 

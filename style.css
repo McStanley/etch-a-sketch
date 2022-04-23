@@ -103,21 +103,17 @@ button {
 .side-container {
     height: auto;
     width: 300px;
-    padding: 50px 15px;
+    padding: 30px 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    font-size: 24px;
+    font-size: 22px;
     background-color: papayawhip;
     border: 2px solid black;
     border-radius: 3%;
     transition: all 0.5s;
-}
-
-.side-container:hover {
-    font-size: 26px;
 }
 
 .side-header {
@@ -147,6 +143,19 @@ button {
     display: flex;
     align-items: center;
     color: #4682b4;
+}
+
+.tip-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tips-img {
+    height: 50px;
+    width: 50px;
+    pointer-events: none;
 }
 
 /* Footer */

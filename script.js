@@ -6,6 +6,7 @@ const colorPicker = document.querySelector('#color-picker');
 const btnDraw = document.querySelector('#btn-draw');
 const btnErase = document.querySelector('#btn-erase');
 const btnClear = document.querySelector('#btn-clear');
+const btnFullscreen = document.querySelector('#btn-fullscreen');
 const sizeSlider = document.querySelector('#size-slider');
 const sizeSliderOutput = document.querySelector('#size-slider-output');
 
@@ -17,6 +18,7 @@ function init() {
     btnDraw.addEventListener('click', activateDraw);
     btnErase.addEventListener('click', activateErase);
     btnClear.addEventListener('click', createGrid);
+    btnFullscreen.addEventListener('click', toggleFullscreen);
     sizeSlider.addEventListener('input', updateGrid);
 
     currentColor = DEFAULT_COLOR;
@@ -89,6 +91,14 @@ function fillSquare(event) {
     //Secondary button
     if (event.buttons == 2) {
         event.target.style.backgroundColor = '';
+    }
+}
+
+function toggleFullscreen(event) {
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
+    } else {
+        document.documentElement.requestFullscreen();
     }
 }
 

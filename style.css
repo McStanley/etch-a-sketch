@@ -71,7 +71,7 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 70px;
+    gap: 30px;
 }
 
 /* Grid */

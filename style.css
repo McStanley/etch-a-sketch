@@ -116,13 +116,6 @@ button {
     transition: all 0.5s;
 }
 
-.side-header {
-    height: 35px;
-    display: flex;
-    align-items: center;
-    font-size: inherit;
-}
-
 #color-picker {
     height: 50px;
     width: 150px;
